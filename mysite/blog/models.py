@@ -9,9 +9,9 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
 
 class Voetbalspelers(models.Model):
-    name = ()
-    club = ()
-    author = ()
+    name = models.CharField(max_length=20)
+    club = models.CharField(max_length=20)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)
     last_change_date = (22-1-2026)
 
