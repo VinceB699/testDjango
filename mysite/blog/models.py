@@ -8,6 +8,14 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
+class Voetbalspelers(models.Model):
+    name = ("Steven Berghuis")
+    club = ("Ajax")
+    author = ("Vincent")
+    created_date = models.DateTimeField(default=timezone.now)
+    last_change_date = (22-1-2026)
+
+    
 def publish(self):
     self.published_date = timezone.now()
     self.save()
