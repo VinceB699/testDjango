@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post
+from .models import post
 
 def post_list (request):
-    post = Post.objects.filter(published_date__1te=timezone.now()).order_by('published_date')
+    post = post.objects.filter(published_date__1te=timezone.now()).order_by('published_date')
     return render (request, 'blog/post_list.html', {'posts': posts})
 
