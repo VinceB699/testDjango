@@ -5,7 +5,7 @@ from django.utils import timezone
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     voetballer = models.CharField(max_length=20)
-    club = models.CharField(max_length=20)
+    voetbalclub = models.CharField(max_length=20)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
